@@ -22,7 +22,9 @@ class UserController extends Controller
             'password' => ['required', 'string', 'min:6', 'max:20', 'confirmed']
         ]);
 
+
         $incomingData['password'] = Hash::make($incomingData['password']);
+
         $user = User::create($incomingData);
         auth()->login($user);
         return redirect('/')->with('success', 'You are now registered!');
@@ -35,12 +37,14 @@ class UserController extends Controller
             'loginpassword' => 'required'
         ]);
 
+
         //$incomingData['password'] = Hash::make($incomingData['loginpassword']);
 
         if (auth()->attempt(['username' => $incomingData['loginusername'], 'password' => $incomingData['loginpassword']])) {
             //$login->session()->regenerate();
             //$user = User::find($UserAvaibility->id);
             //Auth::login($user); 
+
             return redirect('/')->with('success', 'You are now logged in!');
         } else {
             return redirect('/')->with('error', 'Invalid login credentials');
