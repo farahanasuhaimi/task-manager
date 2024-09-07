@@ -2,10 +2,13 @@
     <!-- Profile Section -->
     <div class="flex justify-center items-center h-svh">
         @if (Auth::check())
-            <div class="w-1/2 pr-10">
+            <div class="md:flex flex-col md:space-x-4 w-1/2 pr-10">
                 <div class="text-center">
                     <h2>Hello <strong>{{ auth()->user()->username }}</strong>, what are you catching up today?</h2>
                     <p class="lead text-muted">Any task done?</p>
+                </div>
+                <div class="my-10 text-center">
+                    <a href="/projects/create-project" class="bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white px-4 py-2 rounded-md">Create Project</a>
                 </div>
             </div>
         @else
