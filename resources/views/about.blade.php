@@ -4,13 +4,13 @@
     </x-slot>
     <div class="bg-white shadow-lg rounded-lg p-6">
         {{-- <img src="/img/task_manager_ap.png" alt="About Task Manager" class="w-full h-64 object-cover">    --}}
-        <h1>About Task Manager</h1>
+        <h1 class="p-3 bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white text-lg m-3">About Task Manager</h1>
         <p class="bg-blue">Welcome to the Task Manager app. This app helps you organize and manage your tasks efficiently.</p>
         <p>With Task Manager, you can create tasks, set due dates, assign priorities, and track your progress.</p>
         <p>Stay organized and stay on top of your tasks with Task Manager!</p>
     </div>
     <div class="bg-white shadow-lg rounded-lg p-6">
-        <h2>About Our Company</h2>
+        <h2 class="p-3 bg-indigo-500 shadow-lg shadow-indigo-500/50 text-white text-lg m-3">About Our Company</h2>
         <ul class="list-disc ml-6">
             <li>Founded in 2024</li>
             <li>Headquarter in Kuala Lumpur City</li>
