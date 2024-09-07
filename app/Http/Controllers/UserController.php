@@ -38,7 +38,7 @@ class UserController extends Controller
         ]);
 
 
-        //$incomingData['password'] = Hash::make($incomingData['loginpassword']);
+        $incomingData['password'] = Hash::make($incomingData['loginpassword']);
 
         if (auth()->attempt(['username' => $incomingData['loginusername'], 'password' => $incomingData['loginpassword']])) {
             //$login->session()->regenerate();
