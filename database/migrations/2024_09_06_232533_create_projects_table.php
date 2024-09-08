@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description')->nullable();
             $table->date('due_date')->nullable();
+            $table->foreignId('category_id')->nullable()->constrained();
             $table->enum('status', ['draft', 'in_progress', 'done'])->default('draft');
             $table->timestamps();
         });

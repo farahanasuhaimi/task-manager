@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Project extends Model
 {
@@ -13,6 +13,7 @@ class Project extends Model
         'description',
         'status',
         'due_date',
+        'category_id',
         'user_id'
     ];
     protected $casts = [
