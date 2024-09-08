@@ -12,6 +12,7 @@ class Project extends Model
         'name',
         'description',
         'status',
+        'due_date',
         'user_id'
     ];
     protected $casts = [
@@ -22,5 +23,10 @@ class Project extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
     }
 }
