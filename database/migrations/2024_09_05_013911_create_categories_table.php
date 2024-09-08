@@ -17,9 +17,9 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Schema::table('projects', function (Blueprint $table) {
-            $table->foreignId('category_id')->nullable()->constrained('categories')->onDelete('set null');
-        });
+        // Schema::table('projects', function (Blueprint $table) {
+        //     $table->foreignId('category_id')->nullable()->constrained('categories')->onDelete('set null');
+        // });
     }
 
     /**

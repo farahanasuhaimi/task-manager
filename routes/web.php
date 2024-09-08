@@ -30,3 +30,4 @@ Route::post('/logout', [UserController::class, "logout"])->middleware('auth');
 // ProjectController routes
 Route::get('/projects/create-project', [ProjectController::class, "showCreateProjectForm"]);
 Route::post('/projects/create-project', [ProjectController::class, "createProject"]);
+Route::get('/projects/list-projects', [ProjectController::class, "listProjects"]);
