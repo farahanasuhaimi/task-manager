@@ -37,8 +37,6 @@ class UserController extends Controller
             'loginpassword' => 'required'
         ]);
 
-
-
         $incomingData['password'] = Hash::make($incomingData['loginpassword']);
 
 
