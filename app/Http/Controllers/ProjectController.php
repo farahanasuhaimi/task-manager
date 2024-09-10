@@ -23,7 +23,7 @@ class ProjectController extends Controller
         $incomingData['category_id'] = $incomingData['category_id'] ?? null;
         $incomingData['user_id'] = auth()->id();
         $project = Project::create($incomingData);
-        return view('projects/list-projects')->with('success', 'Project created successfully!');
+        return redirect()->route('projects.list')->with('success', 'Project created successfully!');
     }
 
     public function showCreateProjectForm()
@@ -34,6 +34,7 @@ class ProjectController extends Controller
 
     public function listProjects()
     {
-        return 'view projects';
+        $projects = Project::where('user_id', auth()->id())->orderBy('created_at', 'desc')->paginate(10);
+        return view('projects.list-projects', compact('projects'));
     }
 }
