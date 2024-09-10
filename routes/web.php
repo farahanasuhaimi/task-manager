@@ -26,8 +26,6 @@ Route::get('/', [UserController::class, "homepage"])->name('login');
 Route::post('/register', [UserController::class, "register"])->middleware('guest');
 Route::post('/login', [UserController::class, "login"])->middleware('guest');
 
-
-
 Route::group(['middleware' => ['auth']], function () {
 
     Route::post('/logout', [UserController::class, "logout"]);
@@ -37,3 +35,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/projects/create-project', [ProjectController::class, "createProject"]);
     Route::get('/projects/list-projects', [ProjectController::class, "listProjects"])->name('projects.list');
 });
+
