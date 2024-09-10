@@ -27,11 +27,10 @@ Route::post('/register', [UserController::class, "register"])->middleware('guest
 Route::post('/login', [UserController::class, "login"])->middleware('guest');
 Route::post('/logout', [UserController::class, "logout"])->middleware('auth');
 
-
-
 Route::group(['middleware' => ['auth']], function () {
     // ProjectController routes
     Route::get('/projects/create-project', [ProjectController::class, "showCreateProjectForm"]);
     Route::post('/projects/create-project', [ProjectController::class, "createProject"]);
     Route::get('/projects/list-projects', [ProjectController::class, "listProjects"]);
 });
+
