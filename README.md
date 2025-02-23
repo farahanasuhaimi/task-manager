@@ -20,5 +20,7 @@ TaskManager is a powerful and easy-to-use task management application designed t
 
 ![image](https://github.com/user-attachments/assets/a8d3b714-93ad-4349-b4d6-47b10ca6c6bc)
 
+![image](/images/user-login.png)
 
+![image](/images/project-list.png)
 
