@@ -11,6 +11,12 @@
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">Due: {{ $project->due_date ?? 'Not set' }}</span>
                             {{-- <a href="{{ route('projects.show', $project->id) }}" class="text-blue-500 hover:text-blue-700">View Details</a> --}}
+                            <form action="{{ route('projects.destroy', $project->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this project?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:text-red-700">Delete</button>
+                            </form>
+
                         </div>
                     </div>
                 @endforeach

@@ -34,5 +34,5 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/projects/create-project', [ProjectController::class, "showCreateProjectForm"]);
     Route::post('/projects/create-project', [ProjectController::class, "createProject"]);
     Route::get('/projects/list-projects', [ProjectController::class, "listProjects"])->name('projects.list');
+    Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 });
-

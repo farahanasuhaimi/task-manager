@@ -37,4 +37,10 @@ class ProjectController extends Controller
         $projects = Project::where('user_id', auth()->id())->orderBy('created_at', 'desc')->paginate(10);
         return view('projects.list-projects', compact('projects'));
     }
+
+    public function destroy(Project $project)
+    {
+        $project->delete();
+        return redirect()->route('projects.list')->with('success', 'Project deleted successfully.');
+    }
 }
